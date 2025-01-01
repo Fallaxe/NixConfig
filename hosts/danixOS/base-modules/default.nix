@@ -6,5 +6,6 @@
     ./hyprland
     ./sddm
     ./std-dev-tools
+    ./autoUpdate
   ];
 }
