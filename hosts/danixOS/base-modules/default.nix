@@ -4,8 +4,8 @@
   imports =
   [
     ./hyprland
-    ./sddm
     ./std-dev-tools
+    ./sddm
     ./autoUpdate
     ./home-manager
   ];
