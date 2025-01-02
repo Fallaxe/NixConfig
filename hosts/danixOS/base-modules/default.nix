@@ -7,5 +7,6 @@
     ./sddm
     ./std-dev-tools
     ./autoUpdate
+    ./home-manager
   ];
 }
