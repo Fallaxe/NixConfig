@@ -1,7 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  programs.hyprland = {
+  home.packages = [pkgs.zsh];
+
+  wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
 	  systemd.enable = true;

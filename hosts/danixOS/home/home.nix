@@ -37,7 +37,10 @@
   [
     ./home-modules/zsh      #shell
     ./home-modules/kitty    #terminal
-    ./home-modules/code     #editor
-    ./home-modules/hyprland #displaymanager
-  ]
+    #./home-modules/code     #editor
+    ./home-modules/hypr-dotfiles #displaymanager
+  ];
+
+  nixpkgs.config.allowUnfree = true;
+
 }

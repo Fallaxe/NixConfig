@@ -8,7 +8,7 @@
     home-manager = {
         extraSpecialArgs = {inherit inputs;};
         users ={
-            "daniele" = import ../home;
+            "daniele" = import ../../home;
         };
     };
 }
