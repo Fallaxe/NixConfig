@@ -25,9 +25,19 @@
 
     packages = with pkgs;[
       fastfetch
+      micro
+      yazi
       vim
-      zsh
-      kitty
+      firefox
+      vscode
     ];
-  }
+  };
+
+  imports =
+  [
+    ./home-modules/zsh      #shell
+    ./home-modules/kitty    #terminal
+    ./home-modules/code     #editor
+    ./home-modules/hyprland #displaymanager
+  ]
 }

@@ -2,10 +2,7 @@
 {
   imports = 
   [
-    ./home-modules/zsh    #shell
-    ./home-modules/kitty  #terminal
-    ./home-modules/code   #editor
-    ./home.nix
+    ./home.nix #change here the home if you want to create a new one
   ];
 
 }
