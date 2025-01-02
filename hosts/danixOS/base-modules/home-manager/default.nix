@@ -2,7 +2,7 @@
 {
     imports = 
     [
-        inputs.home-manager.nixosModules.danixOS
+        inputs.home-manager.nixosModules.default
     ];
 
     home-manager = {

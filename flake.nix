@@ -5,6 +5,12 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";  # unstable packages!!
 	  hyprland.url = "github:hyprwm/Hyprland"; # hyprland development
+
+    home-manager = {
+       url = "github:nix-community/home-manager";
+       inputs.nixpkgs.follows = "nixpkgs";
+       
+    };
   };
 
   outputs = {self, nixpkgs, hyprland, ...} @ inputs: {
