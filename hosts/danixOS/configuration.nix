@@ -55,13 +55,13 @@
   console.keyMap = "it2";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  programs.zsh.enable = true;
   users.users.daniele = {
     isNormalUser = true;
     description = "daniele";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
-    
-    #shell = pkgs.zsh;
+    shell = pkgs.zsh;
   };
 
 

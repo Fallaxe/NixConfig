@@ -1,5 +1,15 @@
 {config, programs, pkgs, ...}:
 {
+
+  imports =
+  [
+    ./home-modules/zsh      #shell
+    ./home-modules/kitty    #terminal
+    #./home-modules/code     #editor
+    ./home-modules/hypr-dotfiles #displaymanager
+  ];
+
+
   home = {
     username = "daniele";
     homeDirectory = "/home/daniele";
@@ -7,6 +17,7 @@
       EDITOR = "code";
       BROWSER = "firefox";
       TERMINAL = "kitty";
+      SHELL = "${pkgs.zsh}/bin/zsh";
       GBM_BACKEND= "nvidia-drm";
       #__GLX_VENDOR_LIBRARY_NAME= "nvidia";
       #LIBVA_DRIVER_NAME= "nvidia"; # hardware acceleration
@@ -33,13 +44,6 @@
     ];
   };
 
-  imports =
-  [
-    ./home-modules/zsh      #shell
-    ./home-modules/kitty    #terminal
-    #./home-modules/code     #editor
-    ./home-modules/hypr-dotfiles #displaymanager
-  ];
 
   nixpkgs.config.allowUnfree = true;
 

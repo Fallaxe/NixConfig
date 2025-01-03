@@ -13,7 +13,7 @@
 
 	   	monitor = 
 	   	[
-	   		",preferred,auto, 1"	
+	   		",preferred,auto, auto"	
 	   	];
 
 		xwayland = {
@@ -62,6 +62,15 @@
 			};
 		};
 
+		device = {
+			name = "epic-mouse-v1";
+			sensitivity = "0.5";
+		};
+
+		gestures = {
+			workspace_swipe = false;
+		};
+
     	bind =
       	[
         	"$mod, F, exec, firefox"
@@ -73,7 +82,7 @@
 		];
 
 		
-		};
+	};
 
     #plugins = [
     #  inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
