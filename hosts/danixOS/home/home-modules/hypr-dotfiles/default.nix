@@ -3,7 +3,8 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-	  systemd.enable = true;
+	systemd.enable = true;
+	package  = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 	 settings = {
 
 	   "$mod" = "SUPER";
@@ -34,7 +35,31 @@
 				natural_scroll = true;
 			};
 			accel_profile = "flat";
-			sesitivity = 0;
+			sensitivity = 0;
+		};
+
+		decoration {
+			rounding = 10;
+
+			# Change transparency of focused and unfocused windows
+			active_opacity = 1.0;
+			inactive_opacity = 1.0;
+
+			shadow {
+				enabled = true;
+				range = 4;
+				render_power = 3;
+				color = rgba(1a1a1aee);
+			};
+
+			# https://wiki.hyprland.org/Configuring/Variables/#blur
+			blur {
+				enabled = true;
+				size = 3;
+				passes = 1;
+
+				vibrancy = 0.1696;
+			};
 		};
 
     	bind =
@@ -43,6 +68,7 @@
 			"$mod, T, exec, kitty"
 			"$mod, Q, killactive,"
 			"$mod, M, exit"
+			"$mod, C, exec, code"
 
 		];
 
