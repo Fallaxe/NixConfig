@@ -10,14 +10,14 @@
 	  
 	    shellAliases = {
 	      ll = "ls -l";
-	      update = "sudo nixos-rebuild switch";
+	      update-flake = "sudo nixos-rebuild switch --flake ~/gitclones/NixConfig#danixOS";
 	    };
 	    history.size = 10000;
 
 	    oh-my-zsh = {
 	        enable = true;
 	        plugins = [ "git" ];
-	        theme = "robbyrussell";
+	        theme = "bira";
 	      };
 	 };
    
