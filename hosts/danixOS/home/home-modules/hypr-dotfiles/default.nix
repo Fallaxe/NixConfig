@@ -83,7 +83,7 @@
 			"$mainMod, Q, killactive,"
 			"$mainMod, M, exit"
 			"$mainMod, C, exec, code"
-			"$modMod, E, exec, kitty -e yazi"
+			"$mainMod, E, exec, kitty -e yazi"
 
 						# Move focus with mainMod + arrow keys
 			"$mainMod, left, movefocus, l"

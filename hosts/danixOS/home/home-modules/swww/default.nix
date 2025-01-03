@@ -1,8 +1,10 @@
 { config, pkgs, inputs, ... }:
 {
-  home.packages = {
+  home.packages = [
     pkgs.swww
-  };
+  ];
 
-  home.file."wallpapers/wall1.png".source="./wallpapers/wall1.png"
+  home.file."wallpapers/wall1.png".source=./wallpapers/wall1.png;
+  home.file."wallpapers/wall2.png".source=./wallpapers/wall2.png;
+
 }
