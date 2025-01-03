@@ -7,6 +7,8 @@
     ./home-modules/kitty    #terminal
     #./home-modules/code     #editor
     ./home-modules/hypr-dotfiles #displaymanager
+    ./home-modules/yazi       #explorer TUI
+    ./home-modules/swww       #wallpaper
   ];
 
 

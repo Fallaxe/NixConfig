@@ -71,6 +71,11 @@
 			workspace_swipe = false;
 		};
 
+
+		exec-once = [
+			"swww-daemon & sleep 0.1 && swww img ~/wallpapers/wall1.png"
+		];
+
     	bind =
       	[
         	"$mainMod, F, exec, firefox"
@@ -78,6 +83,7 @@
 			"$mainMod, Q, killactive,"
 			"$mainMod, M, exit"
 			"$mainMod, C, exec, code"
+			"$modMod, E, exec, kitty -e yazi"
 
 						# Move focus with mainMod + arrow keys
 			"$mainMod, left, movefocus, l"
