@@ -1,36 +1,57 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, inputs, ... }:
 {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
 	  systemd.enable = true;
+	 settings = {
 
-		settings = {
-			    "$mod" = "SUPER";
-    bind =
-      [
-        "$mod, F, exec, firefox"
-				"$mod, T, exec, kitty"
-        ", Print, exec, grimblast copy area"
-      ]
-      ++ (
-        # workspaces
-        # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
-        builtins.concatLists (builtins.genList (i:
-            let ws = i + 1;
-            in [
-              "$mod, code:1${toString i}, workspace, ${toString ws}"
-              "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-            ]
-          )
-          9)
-      );
+	   "$mod" = "SUPER";
+	   "$terminal" = "kitty";
+	   "$browser" = "firefox";
+
+	   	monitor = 
+	   	[
+	   		",preferred,auto, 1"	
+	   	];
+
+		xwayland = {
+			force_zero_scaling = true;
 		};
 
-    plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
-    ];
+		general = {
+			gaps_in = 6;
+			gaps_out = 6;
+			border_size = 2;
+			layout = "dwindle";
+			allow_tearing = true;
+		};
+	   	
+		input = {
+			kb_layout = "it";
+			follow_mouse = true;
+			touchpad  = {
+				natural_scroll = true;
+			};
+			accel_profile = "flat";
+			sesitivity = 0;
+		};
+
+    	bind =
+      	[
+        	"$mod, F, exec, firefox"
+			"$mod, T, exec, kitty"
+			"$mod, Q, killactive,"
+			"$mod, M, exit"
+
+		];
+
 		
-  };
+		};
+
+    #plugins = [
+    #  inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
+    #];	
+    
+  };#end wayland.windowManager brackets!
 }
