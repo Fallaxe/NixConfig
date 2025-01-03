@@ -38,22 +38,22 @@
 			sensitivity = 0;
 		};
 
-		decoration {
+		decoration = {
 			rounding = 10;
 
 			# Change transparency of focused and unfocused windows
 			active_opacity = 1.0;
 			inactive_opacity = 1.0;
 
-			shadow {
+			shadow = {
 				enabled = true;
 				range = 4;
 				render_power = 3;
-				color = rgba(1a1a1aee);
+				#color = rgba(1a1a1aee);
 			};
 
 			# https://wiki.hyprland.org/Configuring/Variables/#blur
-			blur {
+			blur = {
 				enabled = true;
 				size = 3;
 				passes = 1;
