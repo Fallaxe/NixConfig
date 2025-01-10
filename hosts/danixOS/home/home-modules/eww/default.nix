@@ -7,6 +7,8 @@
 
   programs.eww = {
     enable = true;
+    configDir = "${config.home.homeDirectory}/.config/eww";
+    enableZshIntegration = true;
   };
 
 }
