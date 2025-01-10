@@ -7,7 +7,6 @@
 
   programs.eww = {
     enable = true;
-
   };
 
 }
