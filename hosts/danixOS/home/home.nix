@@ -9,6 +9,8 @@
     ./home-modules/hypr-dotfiles #displaymanager
     ./home-modules/yazi       #explorer TUI
     ./home-modules/swww       #wallpaper
+    ./home-modules/eww       #bar
+
   ];
 
 

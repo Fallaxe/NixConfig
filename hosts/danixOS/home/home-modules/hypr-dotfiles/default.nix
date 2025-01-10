@@ -1,8 +1,8 @@
 { config, pkgs, inputs, ... }:
 {
   wayland.windowManager.hyprland = {
-    enable = true;
-    xwayland.enable = true;
+  enable = true;
+  xwayland.enable = true;
 	systemd.enable = true;
 	package  = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 	 settings = {
@@ -73,7 +73,7 @@
 
 
 		exec-once = [
-			"swww-daemon & sleep 0.1 && swww img ~/wallpapers/wall1.png"
+			"swww-daemon & wait $! && swww img ~/wallpapers/wall1.png"
 		];
 
     	bind =
