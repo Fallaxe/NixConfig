@@ -4,11 +4,12 @@
   [
     ./base-modules                # base modules --> global things
     ./hardware-configuration.nix  #IMPORTANT DONT EDIT
+    ./bootloader.nix
   ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  #boot.loader.systemd-boot.enable = true;
+  #boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
 
