@@ -7,8 +7,6 @@
 
   programs.eww = {
     enable = true;
-    #autostart = true;
-    configDir = "~/.config/eww";
 
   };
 
