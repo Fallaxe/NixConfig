@@ -4,11 +4,12 @@
   home.packages = [
     pkgs.eww
   ];
-
-  programs.eww = {
-    enable = true;
-    configDir = "${config.home.homeDirectory}/.config/eww";
-    enableZshIntegration = true;
-  };
+  
+  home.file.".config/eww/".source=./hellow;
+  # programs.eww = {
+  #   enable = true;
+  #   configDir = "${config.home.homeDirectory}/.config/eww";
+  #   enableZshIntegration = true;
+  # };
 
 }
