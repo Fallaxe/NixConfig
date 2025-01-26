@@ -30,4 +30,15 @@
     :focusable "false" ; This is necessary for any widgets that use the keyboard to work.
     ;:namespace "??" ; Set the wayland layersurface namespace eww uses.
     "HELLO WORLD"
+    
+    (defwindow bar
+          :screen 0 ;; screen?
+          :geometry (geometry :x "0%"
+                       :y "9px"
+                       :width "98%"
+                       :height "30px"
+                       :anchor "top center")
+          :stacking "fg"
+          :windowtype "dock"
+  (bar_1))
 )
