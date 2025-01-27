@@ -5,7 +5,7 @@
     pkgs.eww-wayland
   ];
   
-  home.file.".config/eww/".source=./hellow;
+  home.file.".config/eww/".source=./bar_easy;
   # programs.eww = {
   #   enable = true;
   #   configDir = "${config.home.homeDirectory}/.config/eww";

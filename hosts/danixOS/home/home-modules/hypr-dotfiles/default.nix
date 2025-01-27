@@ -22,7 +22,7 @@
 
 		general = {
 			gaps_in = 6;
-			gaps_out = 6;
+			gaps_out = ["42, 6, 6, 6"];
 			border_size = 2;
 			layout = "dwindle";
 			allow_tearing = true;
@@ -74,6 +74,7 @@
 
 		exec-once = [
 			"swww-daemon & wait $! && swww img ~/wallpapers/wall1.png"
+			"eww daemon & wait $! && eww open bar"
 		];
 
     	bind =
@@ -156,7 +157,7 @@
 
 		# windowrule = [
 		# 	"nofocus, bar"
-		# ];
+		# ]
 		
 	};
 
