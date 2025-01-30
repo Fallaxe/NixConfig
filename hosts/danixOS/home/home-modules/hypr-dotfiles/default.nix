@@ -73,8 +73,8 @@
 
 
 		exec-once = [
-			"swww-daemon & wait $! && swww img ~/wallpapers/wall1.png"
-			"eww daemon & wait $! && eww open bar"
+		  "swww-daemon & wait $! && swww img ~/wallpapers/wall1.png"
+		  "eww daemon & wait $! && eww open bar"
 		];
 
     	bind =
@@ -86,7 +86,7 @@
 			"$mainMod, C, exec, code"
 			"$mainMod, E, exec, kitty -e yazi"
 
-						# Move focus with mainMod + arrow keys
+			# Move focus with mainMod + arrow keys
 			"$mainMod, left, movefocus, l"
 			"$mainMod, right, movefocus, r"
 			"$mainMod, up, movefocus, u"

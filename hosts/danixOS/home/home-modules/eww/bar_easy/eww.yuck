@@ -1,3 +1,5 @@
+(defvar workspace-active 1)  ;; Variabile per tenere traccia del workspace attivo
+
 (defwidget bar []
   (centerbox :orientation "h"
     (workspaces)
@@ -23,16 +25,44 @@
        :space-evenly true
        :halign "start"
        :spacing 10
-    (button :onclick "hyprctl dispatch workspace 1" 1)
-    (button :onclick "hyprctl dispatch workspace 2" 2)
-    (button :onclick "hyprctl dispatch workspace 3" 3)
-    (button :onclick "hyprctl dispatch workspace 4" 4)
-    (button :onclick "hyprctl dispatch workspace 5" 5)
-    (button :onclick "hyprctl dispatch workspace 6" 6)
-    (button :onclick "hyprctl dispatch workspace 7" 7)
-    (button :onclick "hyprctl dispatch workspace 8" 8)
-    (button :onclick "hyprctl dispatch workspace 9" 9)))
-
+    (button 
+            :class {workspace-active == 1 ? "workspace-btn active" : "workspace-btn"}
+            ;:class (if(= workspace-active 1) "workspace-btn active" "workspace-btn" )
+            :onclick "eww update workspace-active=2; hyprctl dispatch workspace 1" 1)
+    (button 
+            :class {workspace-active == 2 ? "workspace-btn active" : "workspace-btn"}
+            ;:class (if(= workspace-active 2) "workspace-btn active" "workspace-btn" )
+            :onclick "eww update workspace-active=2; hyprctl dispatch workspace 2" 2)
+    (button 
+            :class {workspace-active == 3 ? "workspace-btn active" : "workspace-btn"}
+            ;:class (if(= workspace-active 3) "workspace-btn active" "workspace-btn" )
+            :onclick "eww update workspace-active=3; hyprctl dispatch workspace 3" 3)
+    (button 
+            :class {workspace-active == 4 ? "workspace-btn active" : "workspace-btn"}
+            ;:class (if(= workspace-active 4) "workspace-btn active" "workspace-btn" )
+            :onclick "eww update workspace-active=4; hyprctl dispatch workspace 4" 4)
+    (button 
+            :class {workspace-active == 5 ? "workspace-btn active" : "workspace-btn"}
+            ;:class (if(= workspace-active 5) "workspace-btn active" "workspace-btn" )
+            :onclick "eww update workspace-active=5; hyprctl dispatch workspace 5" 5)
+    (button 
+            :class {workspace-active == 6 ? "workspace-btn active" : "workspace-btn"}
+            ;:class (if(= workspace-active 6) "workspace-btn active" "workspace-btn" )
+            :onclick "eww update workspace-active=6; hyprctl dispatch workspace 6" 6)
+    (button 
+            :class {workspace-active == 7 ? "workspace-btn active" : "workspace-btn"}
+            ;:class (if(= workspace-active 7) "workspace-btn active" "workspace-btn" )
+            :onclick "eww update workspace-active=7; hyprctl dispatch workspace 7" 7)
+    (button 
+            :class {workspace-active == 8 ? "workspace-btn active" : "workspace-btn"}
+            ;:class (if(= workspace-active 8) "workspace-btn active" "workspace-btn" )
+            :onclick "eww update workspace-active=8; hyprctl dispatch workspace 8" 8)
+    (button 
+            :class {workspace-active == 9 ? "workspace-btn active" : "workspace-btn"}
+            ;:class (if(= workspace-active 9) "workspace-btn active" "workspace-btn" )
+            :onclick "eww update workspace-active=9; hyprctl dispatch workspace 9" 9)
+    )
+  )
 (defwidget music []
   (box :class "music"
        :orientation "h"
