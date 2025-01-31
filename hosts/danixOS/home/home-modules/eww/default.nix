@@ -2,7 +2,7 @@
 { config, pkgs, inputs, ... }:
 {
   home.packages = [
-    pkgs.eww-wayland
+    pkgs.eww #the pkg "eww-wayland" is deprecated!
   ];
   
   home.file.".config/eww/".source=./bar_easy;
